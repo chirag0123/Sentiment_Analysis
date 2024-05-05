@@ -1,0 +1,126 @@
+body {
+    background-color: black;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 17px;
+    /* border-style: solid; */
+    /* border-radius: 20px; */
+    /* border-color: red; */
+    margin: 0;
+    /* background-color:#1B1212; */
+    color: whitesmoke;
+}
+
+.left {
+    display: flex;
+    align-items: center; /* Added */
+}
+
+.brand {
+    /* font-weight: bold; */
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu,
+.menu-mobile {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding-left: 37vw;
+}
+
+.menu li,
+.menu-mobile li {
+    margin-right: 20px;
+}
+
+.menu li:last-child,
+.menu-mobile li:last-child {
+    margin-right: 0;
+}
+
+.menu a,
+.menu-mobile a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* color: red; */
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    border: solid;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-color: red;
+    background-color: transparent;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: transform 0.3s ease;
+}
+
+.active.line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.active.line2 {
+    opacity: 0;
+}
+
+.active.line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-mobile.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
